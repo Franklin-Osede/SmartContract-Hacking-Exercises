@@ -1,45 +1,98 @@
-# sch-exercises-part-1
-JohnnyTime's smart contract hacking course part 1 exercises.
+# Smart Contract Hacking Exercises
 
-# Smart Contract Hacking Exercises Guidelines
+# Introduction
 
-## Structure
-* The following repository is a hardhat project
-* There are 3 main folders:
-  * `./instructions` - All the instructions for the exercises
-  * `./contracts` - The smart contracts of the exercises
-  * `./test` - The test files to execute the exercises and complete them
+Welcome to my Smart Contract Hacking Exercises repository! This project consists of a series of exercises designed to enhance my understanding of smart contract vulnerabilities and security exploits. By working through these exercises, I aim to identify, analyze, and exploit weaknesses in Solidity smart contracts.
 
-## Setup & Exercise Execution
+# Why?
 
-### Dependencies
-* From the root folder run: `npm i`
+The purpose of this repository is to provide hands-on experience in smart contract security by simulating real-world vulnerabilities. This will help me:
 
-### RPC NODE - For Mainnet Forks
-* Sign up to [Infura](https://infura.io/dashboard) and get an Ethereum Mainnet URL for free.
-* Copy the `.env-example` file and call it `.env` then set there your Infura URL for:
-  * `MAINNET` - Ethereum Mainnet
+Improve my Solidity security skills.
 
-### Exercise Execution
-* To execute and test an exercise, run the command `npm run [exercise-name]` from the root folder
-* You can always check all the exercise names in the `./package.json` file
+Understand common smart contract vulnerabilities.
 
-### Exercise Execution Example
-In case you are working on the exercise "reentrancy-2":
-* Feel free to create contracts under `./contracts/reentrancy-2/`
-* Feel free to change `./tests/reentrancy-2/tests.js` file
+Learn how to mitigate risks and secure smart contracts effectively.
 
-Execute from the root folder: `npm run reentrancy-2` to check if you completed the exercise successfully.
+Gain experience using Hardhat for testing and debugging.
 
-## Guidelines
-Unless you've been told otherwise in a specific exercise, you may not change the EVM state with special hardhat functionalities (balances, block time, etc...), and you may not change the `before` and `after` sections in the test files.
+# Structure
 
+This repository is structured as a Hardhat project with the following main folders:
 
-## Hardhat Basic Commands
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+./instructions - Contains all the instructions for each exercise.
+
+./contracts - Includes the Solidity smart contracts used in the exercises.
+
+./test - Holds the test files to execute and validate the exercises.
+
+# Quick Start Guide
+
+Setup & Installation
+
+Dependencies
+
+From the root folder, install all required dependencies:
+
+npm install
+
+RPC Node - For Mainnet Forks
+
+I signed up for Infura (or any other Ethereum node provider).
+
+Obtained an Ethereum Mainnet URL.
+
+Copied the .env-example file and renamed it to .env.
+
+Set my Infura URL for:
+
+MAINNET - Ethereum Mainnet
+
+Running Exercises
+
+To execute and test an exercise, I use the following command:
+
+npm run [exercise-name]
+
+I can find the list of available exercises in the package.json file.
+
+Example:
+
+If working on the reentrancy-2 exercise:
+
+Create any necessary contracts under ./contracts/reentrancy-2/
+
+Modify the test file ./test/reentrancy-2/tests.js as needed.
+
+Run the exercise:
+
+npm run reentrancy-2
+
+This will validate whether I have completed the exercise successfully.
+
+# Guidelines
+
+Unless explicitly mentioned in an exercise, I do not modify the EVM state using Hardhat functionalities (e.g., balance manipulation, block time changes, etc.).
+
+I do not alter the before and after sections in test files.
+
+Useful Hardhat Commands
+
+npx hardhat help             # List available Hardhat commands
+npx hardhat test             # Run all tests
+REPORT_GAS=true npx hardhat test  # Run tests with gas reporting
+npx hardhat node             # Start a local Hardhat node
+npx hardhat run scripts/deploy.js  # Deploy contracts using a script
+
+Resources
+
+# Solidity Documentation: Solidity Docs
+
+# Hardhat Documentation: Hardhat Docs
+
+#Ethereum Security Best Practices: Consensys Security Guide
+
+License
+
+This project is licensed under the MIT License.
+
